@@ -6,7 +6,7 @@ A fully responsive E-Commerce web application built with React, featuring secure
 
 ## 🚀 Live Demo
 
-> Deploy on [https://e-commerce-dashboard-six-omega.vercel.app]
+🔗 [https://e-commerce-dashboard-six-omega.vercel.app](https://e-commerce-dashboard-six-omega.vercel.app)
 
 ---
 
@@ -32,10 +32,11 @@ A fully responsive E-Commerce web application built with React, featuring secure
 - Recent cart items preview
 
 ### 🛒 Products
-- Fetches real products from [FakeStore API](https://fakestoreapi.com)
+- Fetches 190+ real products from [DummyJSON API](https://dummyjson.com)
+- Infinite scroll — loads 12 products at a time automatically
 - Responsive product grid (1 → 2 → 3 → 4 columns)
-- Search products by name
-- Filter by category (Electronics, Jewelery, Men's, Women's)
+- Search products by name (debounced)
+- Filter by 20+ categories
 - Sort by price (low/high) or top rated
 - Skeleton loading cards while fetching
 - Graceful error handling if API fails
@@ -77,7 +78,7 @@ A fully responsive E-Commerce web application built with React, featuring secure
 | React Router v7 | Client-side routing & protected routes |
 | Tailwind CSS v4 | Utility-first styling |
 | React Hot Toast | Toast notifications |
-| FakeStore API | Product data source |
+| DummyJSON API | Product data source (190+ products) |
 | LocalStorage | Auth & cart persistence |
 | Lucide React | Icons |
 
@@ -99,7 +100,7 @@ src/
 │   ├── Login.jsx           # Login page
 │   ├── Register.jsx        # Registration with password strength
 │   ├── Dashboard.jsx       # Main dashboard with stats
-│   ├── Products.jsx        # Product listing with search & filters
+│   ├── Products.jsx        # Product listing with infinite scroll & filters
 │   ├── Cart.jsx            # Cart with quantity controls & summary
 │   └── Profile.jsx         # View & edit user profile
 ├── routes/
@@ -153,11 +154,12 @@ npm run build
 
 ## 🌟 Bonus Features
 
+- ✅ Infinite product scroll (IntersectionObserver, 12 products per batch)
+- ✅ Product search, category filter & sort
 - ✅ Dark / Light mode toggle
 - ✅ Toast notifications throughout
 - ✅ Cart persisted on page refresh
 - ✅ Custom hooks (`useAuth`, `useCart`)
-- ✅ Product search, category filter & sort
 - ✅ Password strength meter on register
 - ✅ Free shipping threshold indicator
 
